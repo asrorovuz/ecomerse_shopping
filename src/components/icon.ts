@@ -8,4 +8,12 @@ import vercase from "../assets/brand/vercase.svg"
 import zara from "../assets/brand/zara.svg"
 import letter from "../assets/latter.svg"
 
+// money click 
+import visa from "../assets/click/visa.svg"
+import googlepay from "../assets/click/googlepay.svg"
+import applepay from "../assets/click/applepay.svg"
+import paypal from "../assets/click/paypal.svg"
+import master from "../assets/click/master.svg"
+
+export {visa, googlepay, applepay, paypal, master}
 export {search, user, basket, calvin, gucci, prada, vercase, zara, letter} 

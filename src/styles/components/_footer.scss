@@ -50,7 +50,27 @@
   }
 }
 
-.footer-main{
+.footer-main {
   background-color: $gray-20;
   padding-top: 140px;
+
+  .footer-bottom {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $black-400;
+    }
+
+    .money-icons {
+      img {
+        width: 50px;
+        height: auto;
+        cursor: pointer;
+
+        &:hover {
+          filter: brightness(80%);
+        }
+      }
+    }
+  }
 }
