@@ -1,0 +1,54 @@
+.top-banner {
+  background-color: $gray-10;
+  position: relative;
+
+  .banner-content {
+    padding: 103px 0 116px;
+
+    h1 {
+      max-width: 545px;
+      font-weight: 700;
+      font-size: 64px;
+      color: $black;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: $black-400;
+      max-width: 500px;
+      margin-bottom: 32px;
+    }
+
+    .info{
+        margin-top: 48px;
+        max-width: 545px;
+
+        h3{
+            font-size: 40px;
+            font-weight: 700;
+            color: $black;
+        }
+    }
+  }
+
+  .banner-img{
+    background-image: url("src/assets/banner.png");
+    background-size: cover;
+    background-position: right;
+    margin-bottom: -10px;
+    background-repeat: no-repeat;
+    width: calc(100% - 545px);
+    height: 750px;
+  }
+}
+
+.banner-bottom{
+    padding: 45px 0;
+    background-color: $black;
+    position: relative;
+    z-index: 11;
+    margin-bottom: 72px;
+}

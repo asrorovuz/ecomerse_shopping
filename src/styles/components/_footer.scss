@@ -1,0 +1,56 @@
+.footer-contact {
+  background-color: $black;
+  padding: 36px 64px;
+  color: $white;
+  border-radius: 20px;
+  transform: translateY(90px);
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    max-width: 550px;
+  }
+
+  form {
+    width: 349px;
+
+    label,
+    button {
+      width: 100%;
+      border-radius: 62px;
+      background-color: $white;
+      padding: 12px 16px;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    label {
+      font-weight: 400;
+      column-gap: 12px;
+
+      input {
+        border: 0;
+        outline: 0;
+        font-size: 16px;
+        font-weight: 400;
+        width: 100%;
+
+        &::placeholder {
+          color: $black-400;
+        }
+      }
+    }
+
+    button {
+      font-weight: 500;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer-main{
+  background-color: $gray-20;
+  padding-top: 140px;
+}

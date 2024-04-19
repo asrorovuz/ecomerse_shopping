@@ -1,0 +1,48 @@
+.logo a {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 32px;
+  color: $black;
+  text-decoration: none;
+}
+
+ul{
+  column-gap: 24px;
+}
+
+.link, .link-active {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  color: $black;
+}
+
+.link-active {
+  color: $black-300;
+}
+
+.search{
+  background-color: $gray;
+  padding: 12px 16px;
+  border-radius: 62px;
+  width: 577px;
+
+  input{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.reclame{
+  background-color: $black ;
+  color: $white;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+
+  img{
+    cursor: pointer;
+  }
+}
