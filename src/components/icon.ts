@@ -15,5 +15,13 @@ import applepay from "../assets/click/applepay.svg"
 import paypal from "../assets/click/paypal.svg"
 import master from "../assets/click/master.svg"
 
+// social media 
+import facebook from "../assets/social-media/facebook.svg"
+import git from "../assets/social-media/git.svg"
+import instagram from "../assets/social-media/instagram.svg"
+import twiter from "../assets/social-media/twiter.svg"
+
+
+export {facebook, git, instagram, twiter}
 export {visa, googlepay, applepay, paypal, master}
 export {search, user, basket, calvin, gucci, prada, vercase, zara, letter} 
