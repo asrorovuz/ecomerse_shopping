@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ProductCart from "../productCart/ProductCart";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,8 +19,8 @@ const Products = () => {
     !loading ? <div className="container products">
     <h2 className="product-title">Our Products</h2>
     <div className="product-items flex items-center justify-between">
-      {data && data?.slice(0, 4).map((product: IProduct) => (
-        <ProductCart product={product}/>
+      {data && data?.slice(0, 4).map((product: IProduct, index: number) => (
+        <ProductCart product={product} key={index}/>
       ))}
     </div>
     <div className="flex">

@@ -1,4 +1,5 @@
 import Banner from "../../components/banner/Banner"
+import DressStyle from "../../components/dressStyle/DressStyle"
 import Products from "../../components/products/Products"
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
     <>
       <Banner/>
       <Products/>
+      <DressStyle/>
     </>
   )
 }
