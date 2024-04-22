@@ -1,17 +1,28 @@
 import { Link } from "react-router-dom";
-import {facebook, git, instagram, twiter} from "../../icon"
+import { facebook, git, instagram, twiter } from "../../icon";
 
 const FooterTop = () => {
   return (
     <div className="flex justify-between footer-top">
       <div>
         <h2>SHOP.CO</h2>
-        <p>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+        <p>
+          We have clothes that suits your style and which you’re proud to wear.
+          From women to men.
+        </p>
         <div className="social-media flex items-center">
-          <Link to={""}><img src={twiter} alt="twitter"/></Link>
-          <Link to={""}><img src={facebook} alt="facebook"/></Link>
-          <Link to={""}><img src={instagram} alt="instagram"/></Link>
-          <Link to={""}><img src={git} alt="git hub"/></Link>
+          <Link to={""}>
+            <img src={twiter} alt="twitter" />
+          </Link>
+          <Link to={""}>
+            <img src={facebook} alt="facebook" />
+          </Link>
+          <Link to={""}>
+            <img src={instagram} alt="instagram" />
+          </Link>
+          <Link to={""}>
+            <img src={git} alt="git hub" />
+          </Link>
         </div>
       </div>
       <div>

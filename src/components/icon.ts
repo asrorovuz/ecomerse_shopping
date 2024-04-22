@@ -21,7 +21,18 @@ import git from "../assets/social-media/git.svg"
 import instagram from "../assets/social-media/instagram.svg"
 import twiter from "../assets/social-media/twiter.svg"
 
+// 404 not found
+import notfound from "../assets/404.gif"
 
+//starts
+import start from "../assets/start.png"
+import start2 from "../assets/start2.png"
+
+// loader 
+import loader from "../assets/loader.svg"
+
+
+export {start, start2, notfound, loader}
 export {facebook, git, instagram, twiter}
 export {visa, googlepay, applepay, paypal, master}
 export {search, user, basket, calvin, gucci, prada, vercase, zara, letter} 

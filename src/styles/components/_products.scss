@@ -1,0 +1,33 @@
+.products {
+  margin-bottom: 80px;
+
+  .product-title {
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: $black;
+    margin-bottom: 55px;
+  }
+
+  .product-items {
+    margin-bottom: 36px;
+    column-gap: 20px;
+    overflow: hidden;
+  }
+
+  button {
+    border: 1px solid $black-900;
+    border-radius: 62px;
+    padding: 16px 54px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $black;
+    text-decoration: none;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $black;
+    }
+  }
+}

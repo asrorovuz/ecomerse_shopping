@@ -3,7 +3,7 @@
   padding: 36px 64px;
   color: $white;
   border-radius: 20px;
-  transform: translateY(90px);
+  transform: translateY(100px);
 
   h2 {
     font-weight: 700;
@@ -107,7 +107,7 @@
         text-decoration: none;
         width: max-content;
 
-        &:hover{
+        &:hover {
           color: $black-100;
         }
       }
@@ -128,7 +128,7 @@
         width: 50px;
         height: auto;
         cursor: pointer;
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
           filter: brightness(80%);
