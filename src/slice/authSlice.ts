@@ -16,11 +16,9 @@ export const authSlice = createSlice({
             state.error = ""
         },
         userSuccess: (state, actions) => {
-            state.logged = true
+            state.logged = false
             state.loading = false
-            state.error = ""
             state.data = actions.payload
-            localStorage.setItem("token", actions.payload.token)
         },
         userFailur: (state, actions) => {
             state.loading = false

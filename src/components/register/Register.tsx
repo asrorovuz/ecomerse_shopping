@@ -51,7 +51,7 @@ const Register = ({ setIsVisable }: any) => {
     if (logged) {
       navigate("/");
     }
-  }, []);
+  }, [logged]);
 
   return (
     <div className="register">

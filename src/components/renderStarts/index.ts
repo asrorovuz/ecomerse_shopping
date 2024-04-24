@@ -1,4 +1,4 @@
-import { start, start2 } from "../../icon"
+import { start, start2 } from "../icon"
 
 const renderStarts = (rating: number) => {
 

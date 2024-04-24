@@ -34,8 +34,15 @@ import loader from "../assets/loader.svg"
 //logout 
 import logout from "../assets/logout.svg"
 
+//happy
+import successIcon from "../assets/success.svg";
+import rightIcon from "../assets/right-line.svg";
+import leftIcon from "../assets/left-line.svg"
 
-export {start, start2, notfound, loader, logout}
-export {facebook, git, instagram, twiter}
-export {visa, googlepay, applepay, paypal, master}
-export {search, user, basket, calvin, gucci, prada, vercase, zara, letter} 
+
+export {
+    start, start2, notfound, loader, logout, successIcon,
+    leftIcon, rightIcon, facebook, git, instagram, twiter,
+    visa, googlepay, applepay, paypal, master, search, user,
+    basket, calvin, gucci, prada, vercase, zara, letter
+}

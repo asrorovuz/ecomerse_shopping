@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { renderStarts } from ".";
+import { renderStarts } from "../../renderStarts";
 
 const ProductCart = ({ product }: any) => {
   const [starts, setStarts] = useState<null | string[]>(null);
@@ -27,8 +27,8 @@ const ProductCart = ({ product }: any) => {
         <div className="product-name">{name}</div>
         <div className="starts flex items-center">
           <div>
-            {starts?.map((start: string) => (
-              <img src={start} alt="start" key={id} />
+            {starts?.map((start: string, index) => (
+              <img src={start} alt="start" key={`${index} ${id}`} />
             ))}
           </div>
           <p>

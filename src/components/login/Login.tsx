@@ -49,7 +49,7 @@ const Login = ({ setIsVisable }: any) => {
     if(logged){
       navigate("/")
     }
-  }, [])
+  }, [logged])
 
   return (
     <div className="login">

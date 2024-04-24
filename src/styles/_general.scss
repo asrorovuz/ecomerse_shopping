@@ -88,7 +88,7 @@ button {
   transition: 0.3s;
 }
 
-.error{
+.error {
   color: rgb(174, 0, 0);
   background-color: #fff;
   box-shadow: 0 0 2px rgb(109, 31, 31);
@@ -101,10 +101,19 @@ button {
   transform: translateX(-50%);
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-.block{
+.block {
   display: block;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: $black;
+  margin-bottom: 60px;
+  text-transform: uppercase;
 }

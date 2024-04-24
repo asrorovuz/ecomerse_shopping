@@ -10,17 +10,17 @@ const Products = () => {
   const { data, loading } = useSelector((state: any) => state.product);
 
   useEffect(() => {
-    //@ts-ignore
+    // @ts-ignore
     dispatch(fetchProductData());
     
   }, []);
 
   return (
     !loading ? <div className="container products">
-    <h2 className="product-title">Our Products</h2>
+    <h2 className="title">Our Products</h2>
     <div className="product-items flex items-center justify-between">
-      {data && data?.slice(0, 4).map((product: IProduct, index: number) => (
-        <ProductCart product={product} key={index}/>
+      {data && data.length > 0 && data?.slice(0, 4)?.map((product: IProduct, index: number) => (
+        <ProductCart product={product} key={`${index} ${product.id}`}/>
       ))}
     </div>
     <div className="flex">

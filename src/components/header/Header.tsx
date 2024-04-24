@@ -8,12 +8,17 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const { data, logged } = useSelector((state: any) => state.auth);
   const [userVisable, setUserVisable] = useState<boolean>(false);
-
+let token = localStorage.getItem("token")
   const handleOut = () => {
     localStorage.removeItem("token");
+
+    setUserVisable(false)
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+
+  }, [logged, token])
+
 
   return (
     <header>
@@ -37,7 +42,7 @@ const Header = () => {
           <div className="right-icon flex gap-x-4">
             <img className="pointer" src={basket} alt="basket icon" />
             <div className="auth-block">
-              {logged ? (
+              {token ? (
                 <div className="user-icon">
                   <img
                     className="pointer"

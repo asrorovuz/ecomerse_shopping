@@ -18,6 +18,15 @@ export const fetchProductData = createAsyncThunk(
     }
 );
 
+export const fetchCommentData = createAsyncThunk(
+    "product/fetchCommentData",
+    async () => {
+      const response = await axios.get("/opinion");
+
+      return response.data;
+    }
+);
+
 const productSlice = createSlice({
     initialState: <IInitialState>{
         data: null,
@@ -45,7 +54,7 @@ const productSlice = createSlice({
         .addCase(fetchProductData.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message || "Failed to fetch data";
-        });
+        })
     }
 })
 
