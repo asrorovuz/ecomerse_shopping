@@ -8,7 +8,8 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding-inline: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .wrapper {
@@ -85,4 +86,25 @@
 a,
 button {
   transition: 0.3s;
+}
+
+.error{
+  color: rgb(174, 0, 0);
+  background-color: #fff;
+  box-shadow: 0 0 2px rgb(109, 31, 31);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 15px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hide{
+  display: none;
+}
+
+.block{
+  display: block;
 }

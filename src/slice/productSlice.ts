@@ -12,11 +12,11 @@ interface IInitialState {
 export const fetchProductData = createAsyncThunk(
     "product/fetchProductData",
     async () => {
-      const response = await axios.get("https://f7020acc88056659.mokky.dev/products");
+      const response = await axios.get("/products");
 
       return response.data;
     }
-  );
+);
 
 const productSlice = createSlice({
     initialState: <IInitialState>{

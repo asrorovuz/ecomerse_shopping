@@ -1,5 +1,5 @@
 import { useState } from "react";
-import closeIcon from "../../assets/close.svg";
+import closeIcon from "../../../assets/close.svg";
 
 const HeaderTop = () => {
 

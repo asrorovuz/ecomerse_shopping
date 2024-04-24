@@ -1,17 +1,21 @@
-import { Outlet } from "react-router-dom"
-import Header from "../header/Header"
-import Footer from "../footer/Footer"
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+import AuthHeader from "../header/authHeader/AuthHeader";
 
 const Layout = () => {
+  const pathname = useLocation().pathname;
+
   return (
     <div className="wrapper">
-        <Header/>
-        <main>
-            <Outlet/>
-        </main>
-        <Footer/>
-    </div>
-  )
-}
+      {pathname !== "/auth" ? <Header /> : <AuthHeader />}
 
-export default Layout
+      <main>
+        <Outlet />
+      </main>
+      {pathname !== "/auth" && <Footer />}
+    </div>
+  );
+};
+
+export default Layout;
