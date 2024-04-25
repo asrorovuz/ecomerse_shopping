@@ -4,19 +4,21 @@ import Layout from "../layout/Layout";
 import HomePage from "../../pages/home/HomePage";
 import NotFound from "../404/NotFound";
 import Auth from "../../pages/auth/Auth";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import AuthService from "../../service/authService";
 import { userFailur, userSuccess } from "../../slice/authSlice";
 import { useEffect } from "react";
+import Shopping from "../../pages/shop/Shopping";
+import CartPage from "../../pages/cart/CartPage";
 
 const App = () => {
   const dispatch = useDispatch()
 
-  const auth = useSelector((state: any) => state.auth)
+  const id = localStorage.getItem("id")
 
   const getUser = async() => {
     try {
-      const response = await AuthService.getLogin()
+      const response = await AuthService.getLogin(id)
       dispatch(userSuccess(response.data))
     } catch (error) {
       dispatch(userFailur(error))
@@ -25,12 +27,15 @@ const App = () => {
 
   useEffect(() => {
     getUser()
-  }, [auth.data])
+  }, [])
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<HomePage />}/>
+        <Route path="/shop" element={<Shopping/>}>
+          <Route path="/shop/:id" element={<CartPage/>}/>
+        </Route>
         <Route path="/auth" element={<Auth />} />
         <Route path="*" element={<NotFound/>}/>
       </Route>

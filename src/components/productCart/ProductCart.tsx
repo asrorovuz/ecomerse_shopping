@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { renderStarts } from "../../renderStarts";
+import { renderStarts } from "../renderStarts";
 
 const ProductCart = ({ product }: any) => {
   const [starts, setStarts] = useState<null | string[]>(null);

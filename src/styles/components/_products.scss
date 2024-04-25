@@ -1,9 +1,8 @@
 .products {
-  margin-bottom: 80px;
-
   .product-items {
     margin-bottom: 36px;
     column-gap: 20px;
+    row-gap: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 

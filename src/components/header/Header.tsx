@@ -8,10 +8,13 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const { data, logged } = useSelector((state: any) => state.auth);
   const [userVisable, setUserVisable] = useState<boolean>(false);
-let token = localStorage.getItem("token")
+  let token = localStorage.getItem("token")
+
+  console.log(data);
+  
   const handleOut = () => {
     localStorage.removeItem("token");
-
+    localStorage.removeItem("id");
     setUserVisable(false)
   };
 
@@ -52,7 +55,7 @@ let token = localStorage.getItem("token")
                   />
                   {userVisable && (
                     <div className="logout">
-                      <p>{data?.data?.username}</p>
+                      <p>{data?.username ? data.username: data.data.username}</p>
                       <div className="logout-btn">
                         <button
                           onClick={handleOut}
