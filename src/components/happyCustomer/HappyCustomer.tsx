@@ -63,7 +63,7 @@ const HappyCustomer = () => {
       <div className="wrapper">
         <Swiper
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={document.body.clientWidth > 960 ? 3 : 1}
           loop={true}
           navigation={{
             prevEl: ".swiper-button-prev",
@@ -73,7 +73,7 @@ const HappyCustomer = () => {
         >
           {data?.map((elem, index) => {
             return (
-              <SwiperSlide key={`${index} ${elem.id}`}>
+              <SwiperSlide key={`${elem.customer} ${elem.id}`}>
                 <div className="starts flex items-center">
                   {createStart(elem?.rating, index, elem.id, elem.customer)}
                 </div>

@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 const BannerTop = () => {
   return (
     <div className="top-banner">
-      <div className="container flex justify-between items-center">
+      <div className="container flex justify-between items-center banner-main">
         <div className="banner-content">
           <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
           <p>
@@ -11,7 +11,7 @@ const BannerTop = () => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <Button color="black" title="Shop Now" />
+          <div className="banner-btn"><Button color="black" title="Shop Now" /></div>
           <div className="info flex justify-between items-center">
             <div>
               <h3>200+</h3>

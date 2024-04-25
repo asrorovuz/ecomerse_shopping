@@ -18,7 +18,7 @@ const Products = () => {
   return (
     !loading ? <div className="container products">
     <h2 className="title">Our Products</h2>
-    <div className="product-items flex items-center justify-between">
+    <div className="product-items">
       {data && data.length > 0 && data?.slice(0, 4)?.map((product: IProduct, index: number) => (
         <ProductCart product={product} key={`${index} ${product.id}`}/>
       ))}
