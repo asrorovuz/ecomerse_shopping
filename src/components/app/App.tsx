@@ -4,13 +4,15 @@ import Layout from "../layout/Layout";
 import HomePage from "../../pages/home/HomePage";
 import NotFound from "../404/NotFound";
 import Auth from "../../pages/auth/Auth";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import AuthService from "../../service/authService";
 import { userFailur, userSuccess } from "../../slice/authSlice";
 import { useEffect } from "react";
 
 const App = () => {
   const dispatch = useDispatch()
+
+  const auth = useSelector((state: any) => state.auth)
 
   const getUser = async() => {
     try {
@@ -23,7 +25,7 @@ const App = () => {
 
   useEffect(() => {
     getUser()
-  }, [])
+  }, [auth.data])
 
   return (
     <Routes>
