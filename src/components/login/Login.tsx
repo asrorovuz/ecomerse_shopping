@@ -11,9 +11,10 @@ const Login = ({ setIsVisable }: any) => {
     password: "",
   });
 
-  const { loading, logged } = useSelector((state: any) => state.auth);
+  const { loading } = useSelector((state: any) => state.auth);
   const dispatch = useDispatch();
   const navigate =useNavigate()
+  const storage = localStorage.getItem("token")
 
   const onChangeInput = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -46,16 +47,17 @@ const Login = ({ setIsVisable }: any) => {
   };
 
   useEffect(() => {
-    if(logged){
+    if(storage){
       navigate("/")
     }
-  }, [logged])
+  }, [storage])
 
   return (
     <div className="login">
       <ErrorForm />
       <div className="form-block">
         <form onSubmit={onSubmit}>
+          <h2>Sign In</h2>
           <div className="email">
             <label htmlFor="email">Email</label>
             <input

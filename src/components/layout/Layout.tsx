@@ -1,14 +1,14 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import AuthHeader from "../header/authHeader/AuthHeader";
+// import AuthHeader from "../header/authHeader/AuthHeader";
 
 const Layout = () => {
   const pathname = useLocation().pathname;
 
   return (
     <div className="wrapper">
-      {pathname !== "/auth" ? <Header /> : <AuthHeader />}
+      {pathname !== "/auth" && <Header /> }
 
       <main>
         <Outlet />

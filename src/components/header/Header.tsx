@@ -8,20 +8,19 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const { data, logged } = useSelector((state: any) => state.auth);
   const [userVisable, setUserVisable] = useState<boolean>(false);
-  let token = localStorage.getItem("token")
+  let token = localStorage.getItem("token");
 
-  console.log(data);
-  
+  const onChangeVisable = () => {
+    setUserVisable(!userVisable);
+  };
+
   const handleOut = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("id");
-    setUserVisable(false)
+    setUserVisable(false);
   };
 
-  useEffect(() => {
-
-  }, [logged, token])
-
+  useEffect(() => {}, [logged, token]);
 
   return (
     <header>
@@ -46,16 +45,13 @@ const Header = () => {
             <img className="pointer" src={basket} alt="basket icon" />
             <div className="auth-block">
               {token ? (
-                <div className="user-icon">
-                  <img
-                    className="pointer"
-                    onClick={() => setUserVisable(!userVisable)}
-                    src={user}
-                    alt="user icon"
-                  />
+                <div className="user-icon" onClick={() => onChangeVisable()}>
+                  <img className="pointer" src={user} alt="user icon" />
                   {userVisable && (
                     <div className="logout">
-                      <p>{data?.username ? data.username: data.data.username}</p>
+                      <p>
+                        {data?.username ? data.username : data.data.username}
+                      </p>
                       <div className="logout-btn">
                         <button
                           onClick={handleOut}

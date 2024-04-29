@@ -12,35 +12,34 @@ import Shopping from "../../pages/shop/Shopping";
 import CartPage from "../../pages/cart/CartPage";
 
 const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const id = localStorage.getItem("id")
+  const id = localStorage.getItem("id");
 
-  const getUser = async() => {
+  const getUser = async () => {
     try {
-      const response = await AuthService.getLogin(id)
-      dispatch(userSuccess(response.data))
+      const response = await AuthService.getLogin(id);
+      dispatch(userSuccess(response.data));
     } catch (error) {
-      dispatch(userFailur(error))
+      dispatch(userFailur(error));
     }
-  }
+  };
 
   useEffect(() => {
-    getUser()
-  }, [])
+    getUser();
+  }, []);
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/shop" element={<Shopping/>}>
-          <Route path="/shop/:id" element={<CartPage/>}/>
-        </Route>
-        <Route path="/auth" element={<Auth />} />
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<Shopping />}/>
+        <Route path="/shop/:id" element={<CartPage />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
+      <Route path="/auth" element={<Auth />} />
     </Routes>
-  )
-}
+  );
+};
 
 export default App;

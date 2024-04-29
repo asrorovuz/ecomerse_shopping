@@ -4,6 +4,7 @@ import Register from "../../components/register/Register";
 import "./auth.scss";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import AuthHeader from "../../components/header/authHeader/AuthHeader";
 
 const Auth = () => {
   const [isVisable, setIsVisable] = useState<boolean>(true);
@@ -18,13 +19,14 @@ const Auth = () => {
   }, [isVisable]);
 
   return (
-    <>
+    <div className="auth">
+      <AuthHeader />
       {isVisable ? (
         <Login setIsVisable={setIsVisable} />
       ) : (
         <Register setIsVisable={setIsVisable} />
       )}
-    </>
+    </div>
   );
 };
 

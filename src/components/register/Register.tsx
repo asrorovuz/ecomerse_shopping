@@ -12,7 +12,8 @@ const Register = ({ setIsVisable }: any) => {
     password: "",
   });
 
-  const { loading, logged } = useSelector((state: any) => state.auth);
+  const { loading } = useSelector((state: any) => state.auth);
+  const storage = localStorage.getItem("token")
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -48,16 +49,17 @@ const Register = ({ setIsVisable }: any) => {
   };
 
   useEffect(() => {
-    if (logged) {
+    if (storage) {
       navigate("/");
     }
-  }, [logged]);
+  }, [storage]);
 
   return (
     <div className="register">
       <ErrorForm />
       <div className="form-block">
         <form onSubmit={onSubmit}>
+        <h2>Sign Up</h2>
           <div className="username">
             <label htmlFor="username">User name</label>
             <input

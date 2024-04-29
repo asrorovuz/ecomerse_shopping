@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { renderStarts } from "../renderStarts";
+import { useNavigate } from "react-router-dom";
 
 const ProductCart = ({ product }: any) => {
   const [starts, setStarts] = useState<null | string[]>(null);
@@ -12,6 +13,8 @@ const ProductCart = ({ product }: any) => {
     setDiscount(newPrice);
   };
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const start = renderStarts(rating);
     calcPrice();
@@ -22,6 +25,16 @@ const ProductCart = ({ product }: any) => {
     <div>
       <div className="product-img">
         <img src={img} alt="product img" />
+        <div className="add-cart">
+          <button
+            className="white-btn"
+            onClick={() => {
+              navigate(`/shop/${id}`);
+            }}
+          >
+            add to cart
+          </button>
+        </div>
       </div>
       <div className="product-content">
         <div className="product-name">{name}</div>

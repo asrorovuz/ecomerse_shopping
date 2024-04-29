@@ -132,6 +132,38 @@ button {
   }
 }
 
+.starts {
+  font-weight: 400;
+  font-size: 14px;
+  color: $black;
+  column-gap: 13px;
+  margin-bottom: 8px;
+
+  span {
+    color: $black-400;
+  }
+}
+
+.price {
+  column-gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+
+  span {
+    color: $black-600;
+    text-decoration: line-through;
+  }
+
+  .extra {
+    background-color: $redLight;
+    border-radius: 62px;
+    padding: 6px 14px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $red-100;
+  }
+}
+
 @media only screen and (max-width: 960px){
   .container{
     padding-left: 60px;

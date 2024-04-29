@@ -12,21 +12,26 @@ const Products = () => {
   useEffect(() => {
     // @ts-ignore
     dispatch(fetchProductData());
-    
   }, []);
 
-  return (
-    !loading ? <div className="container products">
-    <h2 className="title">Our Products</h2>
-    <div className="product-items">
-      {data && data.length > 0 && data?.slice(0, 4)?.map((product: IProduct, index: number) => (
-        <ProductCart product={product} key={`${index} ${product.id}`}/>
-      ))}
+  return !loading ? (
+    <div className="container products">
+      <h2 className="title">Our Products</h2>
+      <div className="product-items">
+        {data &&
+          data.length > 0 &&
+          data
+            ?.slice(0, 4)
+            ?.map((product: IProduct, index: number) => (
+              <ProductCart product={product} key={`${index} ${product.id}`} />
+            ))}
+      </div>
+      <div className="flex">
+        <button>View All</button>
+      </div>
     </div>
-    <div className="flex">
-      <button >View All</button>
-    </div>
-  </div> : <Loader/>
+  ) : (
+    <Loader />
   );
 };
 
