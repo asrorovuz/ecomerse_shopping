@@ -8,6 +8,8 @@
 }
 
 .cart-detalies {
+  
+
   .title-page {
     text-transform: uppercase;
     font-weight: 600;
@@ -16,11 +18,13 @@
 
   .product-detalist {
     column-gap: 40px;
+    align-items: flex-start;
+    height: 550px;
 
     .product-imgs {
       width: 50%;
       gap: 14px;
-      height: 530px;
+      height: 550px;
 
       .imgs {
         display: grid;
@@ -29,7 +33,7 @@
 
         img {
           border-radius: 20px;
-          height: calc((530px - 2 * 14px) / 3);
+          height: calc((550px - 2 * 14px) / 3);
         }
       }
 
@@ -37,14 +41,18 @@
         overflow: hidden;
 
         img {
+          object-fit: cover;
+          object-position: center;
           border-radius: 20px;
           height: 100%;
+          width: 100%;
         }
       }
     }
 
     .product-info {
       width: 50%;
+      height: 550px;
 
       .product-info-title {
         font-weight: 700;
@@ -66,9 +74,16 @@
         font-size: 16px;
         line-height: 137%;
         color: $black-400;
+        border-bottom: 1px solid $black-900;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
       }
 
       .select-colors {
+        border-bottom: 1px solid $black-900;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+
         .colors {
           column-gap: 16px;
 
@@ -103,6 +118,10 @@
       }
 
       .choose-size {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid $black-900;
+
         .sizes {
           column-gap: 12px;
         }
@@ -120,6 +139,47 @@
         .active-size {
           background-color: $black;
           color: $white;
+        }
+      }
+
+      .add-btns {
+        column-gap: 20px;
+
+        .counter {
+          border-radius: 62px;
+          background-color: $gray;
+          padding: 16px 20px;
+          column-gap: 38px;
+          font-weight: 500;
+          font-size: 16px;
+
+          button {
+            outline: 0;
+            border: 0;
+            font-weight: 500;
+            font-size: 20px;
+            cursor: pointer;
+
+            &:active {
+              transform: scale(1.25);
+            }
+          }
+        }
+
+        .add-cart {
+          width: 100%;
+          text-align: center;
+          border-radius: 62px;
+          padding: 16px 54px;
+          background-color: $black;
+          border: 1px solid $black;
+          color: $white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: transparent;
+            color: $black;
+          }
         }
       }
     }

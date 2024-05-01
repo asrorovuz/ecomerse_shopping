@@ -10,6 +10,7 @@ const CartPage = () => {
   const [starts, setStarts] = useState<null | string[]>(null);
   const [mainImg, setMainImg] = useState<string>("");
   const [targetSize, setTargetSize] = useState<number>(0);
+  const [counter, setCounter] = useState<number>(1)
 
   const fetchData = async () => {
     try {
@@ -132,6 +133,15 @@ const CartPage = () => {
           <div className="choose-size">
             <div className="select-size-title">Choose Size</div>
             <div className="sizes flex">{renderSize}</div>
+          </div>
+
+          <div className="add-btns flex">
+            <div className="counter flex">
+              <button onClick={() => counter > 0 ? setCounter((prev) => prev - 1): setCounter(counter)}>-</button>
+              <span>{counter}</span>
+              <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
+            </div>
+            <div className="add-cart">Add to Cart</div>
           </div>
         </div>
       </div>
