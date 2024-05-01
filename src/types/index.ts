@@ -1,7 +1,7 @@
 
 
 interface IProduct {
-    id: string;
+    id: number;
     img: string;
     rating: number;
     price: number;
@@ -10,6 +10,7 @@ interface IProduct {
     extraImg: string[];
     size: string[];
     color: string[]; 
+    comment: string;
 }
 
 export default IProduct;
