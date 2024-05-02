@@ -4,6 +4,7 @@ import IProduct from "../types";
 
 interface IInitialState {
     data: null | IProduct[],
+    commentData: null | string[]
     loading: boolean,
     error: null | string
 }
@@ -52,6 +53,18 @@ const productSlice = createSlice({
             state.data = action.payload;
         })
         .addCase(fetchProductData.rejected, (state, action) => {
+            state.loading = false;
+            state.error = action.error.message || "Failed to fetch data";
+        })
+        .addCase(fetchCommentData.pending, (state) => {
+            state.loading = true;
+            state.error = null;
+        })
+        .addCase(fetchCommentData.fulfilled, (state, action) => {
+            state.loading = false;
+            state.commentData = action.payload;
+        })
+        .addCase(fetchCommentData.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message || "Failed to fetch data";
         })
