@@ -10,6 +10,7 @@ import { userFailur, userSuccess } from "../../slice/authSlice";
 import { useEffect } from "react";
 import Shopping from "../../pages/shop/Shopping";
 import CartPage from "../../pages/cart/CartPage";
+import Basket from "../../pages/basket/Basket";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,8 +34,9 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<Shopping />}/>
+        <Route path="/shop" element={<Shopping />} />
         <Route path="/shop/:id" element={<CartPage />} />
+        <Route path="/cart" element={<Basket />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="/auth" element={<Auth />} />

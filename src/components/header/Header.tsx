@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { search, basket, logout } from "../icon";
 import { Navbar, HeaderTop } from "../index";
 import { user } from "../icon";
@@ -13,6 +13,8 @@ const Header = () => {
   const onChangeVisable = () => {
     setUserVisable(!userVisable);
   };
+
+  const navigate = useNavigate()
 
   const handleOut = () => {
     localStorage.removeItem("token");
@@ -42,7 +44,7 @@ const Header = () => {
             />
           </div>
           <div className="right-icon flex gap-x-4">
-            <img className="pointer" src={basket} alt="basket icon" />
+            <div onClick={() => navigate("/cart")}><img className="pointer" src={basket} alt="basket icon" /></div>
             <div className="auth-block">
               {token ? (
                 <div className="user-icon" onClick={() => onChangeVisable()}>

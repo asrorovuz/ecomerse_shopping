@@ -144,27 +144,6 @@
       .add-btns {
         column-gap: 20px;
 
-        .counter {
-          border-radius: 62px;
-          background-color: $gray;
-          padding: 16px 20px;
-          column-gap: 38px;
-          font-weight: 500;
-          font-size: 16px;
-
-          button {
-            outline: 0;
-            border: 0;
-            font-weight: 500;
-            font-size: 20px;
-            cursor: pointer;
-
-            &:active {
-              transform: scale(1.25);
-            }
-          }
-        }
-
         .add-cart {
           width: 100%;
           text-align: center;
@@ -251,6 +230,27 @@
           transform: scale(1.1);
         }
       }
+    }
+  }
+}
+
+.counter {
+  border-radius: 62px;
+  background-color: $gray;
+  padding: 16px 20px;
+  column-gap: 38px;
+  font-weight: 500;
+  font-size: 16px;
+
+  button {
+    outline: 0;
+    border: 0;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(1.25);
     }
   }
 }

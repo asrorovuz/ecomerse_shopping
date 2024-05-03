@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "../service/index";
-import IProduct from "../types";
+import {IProduct} from "../types";
 
 interface IInitialState {
     data: null | IProduct[],
@@ -9,7 +9,34 @@ interface IInitialState {
     error: null | string
 }
 
+// cart page 
+export const putProductData = createAsyncThunk(
+    "product/putProductData",
+    async (data: any) => {
+      const response = await axios.post("/userProduct", data);
 
+      if(response.status === 201){
+        alert("success")
+      }
+
+      return response.data;
+    }
+);
+
+export const deleteProductData = createAsyncThunk(
+    "product/deleteProductData",
+    async (id: number) => {
+      const response = await axios.delete(`/userProduct/${id}`);
+
+      if(response.status === 200){
+        alert("success")
+      }
+
+      return response.data;
+    }
+);
+
+//
 export const fetchProductData = createAsyncThunk(
     "product/fetchProductData",
     async () => {
