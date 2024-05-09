@@ -45,7 +45,7 @@
           border-radius: 9px;
           margin-right: 16px;
 
-          img{
+          img {
             border-radius: 9px;
             width: 100%;
             height: 100%;
@@ -89,7 +89,7 @@
             }
           }
 
-          .cart-content-price{
+          .cart-content-price {
             font-size: 24px;
             font-weight: 700;
           }
@@ -142,6 +142,22 @@
         button {
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carts {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .basket {
+    .basket-wrapper {
+      .left-cart,
+      .right-cart {
+        width: 100%;
       }
     }
   }

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import ProductCart from "../../components/productCart/ProductCart";
-import IProduct from "../../types";
+import {IProduct} from "../../types";
 import { useEffect, useState } from "react";
 import Loader from "../../components/loader/Loader";
 import { fetchProductData } from "../../slice/productSlice";
