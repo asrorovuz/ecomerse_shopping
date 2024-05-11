@@ -35,13 +35,14 @@
   }
 
   .banner-img{
-    background-image: url("src/assets/banner.png");
-    background-size: cover;
-    background-position: right;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
     width: calc(100% - 545px);
     height: 750px;
+    display: flex;
+    justify-content: center;
+
+    img{
+      height: 100%;
+    }
   }
 }
 

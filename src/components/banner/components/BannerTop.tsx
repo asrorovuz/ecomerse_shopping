@@ -1,4 +1,5 @@
 import Button from "../../components/Button";
+import bannerImg from "../../../assets/banner.png"
 
 const BannerTop = () => {
   return (
@@ -27,7 +28,9 @@ const BannerTop = () => {
             </div>
           </div>
         </div>
-        <div className="banner-img"></div>
+        <div className="banner-img">
+          <img src={bannerImg} alt="banner img" />
+        </div>
       </div>
     </div>
   );
