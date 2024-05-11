@@ -40,12 +40,12 @@ const CartPage = () => {
     let renderExtraImgs = [];
     if (dataItem && dataItem?.extraImg.length > 0) {
       renderExtraImgs = dataItem?.extraImg?.map((elem: string, index) => (
-        <img key={index} src={`.${elem}`} alt={`product img ${index}`} />
+        <img key={index} src={`${elem}`} alt={`product img ${index}`} />
       ));
     } else {
       for (let index = 0; index < 3; index++) {
         renderExtraImgs.push(
-          <img key={index} src={`.${mainImg}`} alt={`product img ${index}`} />
+          <img key={index} src={`${mainImg}`} alt={`product img ${index}`} />
         );
       }
     }
@@ -137,7 +137,7 @@ const CartPage = () => {
         <div className="product-imgs flex">
           <div className="imgs">{extraImgRender()}</div>
           <div className="main-img">
-            <img src={`.${mainImg}`} alt="product img" />
+            <img src={`${mainImg}`} alt="product img" />
           </div>
         </div>
         <div className="product-info">
